@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal</title>
+	<link rel="stylesheet" type="text/css" href="./index.css"/>
+	<script type="text/javascript" src="./index.js"></script>
+</head>
+<body>
+	<button onclick="modal.show()" class="bt bt-default">Click Me!</button>
+	<div class="modal-hide modal-fade" id="modal"> <!-- modal -->
+		<div class="modal-container"> <!-- 模态框内容 -->
+			<div class="modal-header">	<!-- 模态框头部 -->
+			</div>
+			<div class="modal-content">	<!-- 模态框自定义内容 -->
+			</div>
+			<div class="modal-footer">  <!-- 模态框底部 -->
+				<button class= "bt bt-default" id="modal_cancle_bt">Cancle</button>
+				<button class= "bt bt-default bt-primary" id="modal_ok_bt" onclick="modal.close()">Ok</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.onload=function(argument) {
+			modal.init({
+				content:'<button onclick="hello()" class="bt bt-default">hello</button>',
+				title:'this is my modal',
+			})
+		}
+		function hello() {
+			console.log('helloworld');
+		}
+	</script>
+</body>
+</html>

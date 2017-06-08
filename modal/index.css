@@ -1,0 +1,81 @@
+html {
+	width: 100%;
+    height: 100%;
+}
+.modal-hide {
+	display: none;
+}
+.modal-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-container {
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+.modal-header {
+	font-weight: 900;
+    border-bottom: rgba(236, 230, 230, 0.51) 1px solid;
+    max-height: 20%;
+    padding: 15px;
+}
+.modal-content {
+	padding: 15px;
+}
+.modal-footer {
+	padding: 15px;
+	text-align: right;
+	border-top: rgba(236, 230, 230, 0.51) 1px solid;
+}
+.bt {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px
+}
+
+.bt-default {
+    background-color: #fff;
+    outline: none;
+    border: #ccc 1px solid;
+    padding: 10px;
+    font-size: 14px;
+    width: 100px;
+    border-radius: 5px;
+    font-weight: 300;
+}
+
+.bt-default:hover{
+	background-color: #e6e6e6;
+}
+
+.bt-primary {
+	color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.bt-primary:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74
+}
