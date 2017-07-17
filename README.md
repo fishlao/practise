@@ -24,3 +24,37 @@ modal 弹出框
 
 
 `modal.close()`
+
+---------------------------------------------------------------------------------------
+carousel旋转木马
+
+
+//初始化配置,在需要配置的div的class属性添加'.J_poster'类型，可实例化多个组件
+
+```
+	Carousel.init($(".J_poster"));
+
+```
+在div中的data-setting属性添加配置信息
+
+```
+	data-setting = '{
+		"width": 1200,// 幻灯片的div总体宽度
+  	 	"height": 480,
+  	 	"posterWidth": 640, // 图片宽度
+  	 	"posterHeight": 480,
+  	 	// 可选
+        "opacity": 0.8,
+        // 可选
+  	 	"speed": 500, // 切换速度
+  	 	// 可选
+        "scale": 0.9, // 图片的缩放比例
+        // 可选
+  		"positionAlign": 'middle', //图片的对齐方式
+  		// 可选
+        "delay": 1000,  //自动播放的时间间隔
+        // 可选
+        "autoPlay": false //是否自动播放
+	}'
+
+```

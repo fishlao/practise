@@ -26,7 +26,7 @@
   	 	this.setting = {
   	 		width: 1200,// 幻灯片的div总体宽度
   	 		height: 480,
-  	 		posterWidth: 640, // 图片第一帧宽度
+  	 		posterWidth: 640, // 图片宽度
   	 		posterHeight: 480,
         opacity: 0.8,
   	 		speed: 500, // 切换速度
