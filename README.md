@@ -39,14 +39,14 @@ carousel旋转木马
 
 ```
 	data-setting = '{
-		"width": 1200,// 幻灯片的div总体宽度
-  	 	"height": 480,
-  	 	"posterWidth": 640, // 图片宽度
-  	 	"posterHeight": 480,
+        "width": 1200,// 幻灯片的div总体宽度
+        "height": 480,
+        "posterWidth": 640, // 图片宽度
+        "posterHeight": 480,
         "opacity": 0.8,// 可选
-  	 	"speed": 500, // 切换速度，可选
+        "speed": 500, // 切换速度，可选
         "scale": 0.9, // 图片的缩放比例，可选
-  		"positionAlign": 'middle', //图片的对齐方式，可选['top','bottom']
+        "positionAlign": 'middle', //图片的对齐方式，可选['top','bottom']
         "delay": 1000,  //自动播放的时间间隔,可选
         "autoPlay": false //是否自动播放，可选
 	}'
