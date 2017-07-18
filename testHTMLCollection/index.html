@@ -1,0 +1,29 @@
+<!--声明这是HTML5文档，不需要再引用DTD，浏览器使用这规范去解析文档-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="container">
+		<!--this is answer-->
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>		
+	</div>
+<script type="text/javascript">
+	var container = document.getElementById('container');
+	// querySelectorAll 返回的虽然是nodeList，但是是静态的元素集合
+	var spans = container.querySelectorAll('span');
+	// HTMLcollection （动态变化）
+	console.log(container.children.length,spans.length);
+	// NodeLists (动态变化)
+	console.log(container.childNodes.length);
+	var span = document.createElement('span');
+	span.innerText = '4';
+	container.append(span);
+	console.log(container.children.length,spans.length);
+	console.log(container.childNodes.length);
+</script>
+</body>
+</html>
