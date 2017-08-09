@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event</title>
+</head>
+<body>
+	<div id="parent" style="width:200px;height:200px;background-color:red">
+		<div id="child" class="child" style="width:50px;height:50px;background-color:pink"></div>
+	</div>
+	<ul id="parent-ul">
+		<li id="1">1</li>
+		<li id="2">2</li>
+	</ul>
+<script type="text/javascript">
+	document.addEventListener("click",showCurrentTarget);
+	document.getElementById("parent").addEventListener("click",showCurrentTarget,true);
+	document.getElementById("child").addEventListener("click",showCurrentTarget);
+	function showCurrentTarget(e) {
+		console.log(e.currentTarget,e.currentTarget.id);
+	}
+	function addListenersLi(liNode) {
+		console.log(e.target.id);
+	}
+	window.onload = function(){
+		var ulNode = document.getElementById("parent-ul");
+		//通过事件代理，冒泡机制实现
+		ulNode.addEventListener("click",function(e){
+			if(e.target && e.target.nodeName.toUpperCase() == "LI") {
+				console.log("List item ",e.target.id," was clicked!")
+			}
+
+		})
+	}
+</script>
+</body>
+</html>
