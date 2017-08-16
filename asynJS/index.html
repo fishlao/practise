@@ -1,0 +1,21 @@
+<!doctype>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS异步加载</title>
+	<link rel="preload" as="image" href="http://localhost:3000/images/2.png">
+	<script type="text/javascript" src="http://localhost:3000/javascripts/b.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	console.log("before b")
+</script>
+	JS异步加载
+	<img src="http://localhost:3000/images/2.png">
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',function(){
+	console.log("DOMContentLoaded");
+})
+</script>
+</body>
+</html>
