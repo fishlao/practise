@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>imitateXss</h1>
+    <p>Welcome to <%= title %></p>
+    <textarea id="comment" rows="10" cols="20">
+        <p><<<>>>>&&&&</p><img src="null" onerror="alert(123)">
+    </textarea>
+    <button id="put">comment</button>
+    <button id="get">get</button>
+    <script type="text/javascript">
+        var put = document.getElementById("put");
+        function decodeHTML(str) {
+            var res="";
+            res+=str.replace(/&amp;/g,"&");
+            res=res.replace(/&lt;/g,"<");
+            res=res.replace(/&gt;/g,">");
+            res=res.replace(/&#39;/g,"'");
+            res=res.replace(/&quot;/g,"\"");
+            res=res.replace(/&nbsp;/g," ");
+            return res;
+        }
+        // 过滤掉有可能带有攻击性的标签，例如<script>.<style>.onXXX注册事件，<iframe>
+        function filterTag(str) {
+            // todo....
+        }
+        function jsonP(data){
+            console.log(data);
+        }
+    	function postComment(argument) {
+    		var text = document.getElementById("comment").value;
+    		var xhr = new XMLHttpRequest();
+    		xhr.open("GET","https://www.baidu.com/img/bd_logo1.png",true);
+    		xhr.onreadystatechange = function(){
+    			if(xhr.readyState ==4 && xhr.status === 200) {
+    				// var p = document.createElement("p");
+        //             // 对html解码 	
+        //             p.innerHTML = decodeHTML(xhr.responseText);
+    				// document.body.appendChild(p);
+                    console.log(xhr.responseText)
+    			}
+    		}
+    		xhr.send();
+    	}
+    	put.addEventListener("click",postComment,false);
+        var script = document.createElement("script");
+        script.src="http://localhost:3000/getJsonP?callback=jsonP";
+        document.body.appendChild(script); 
+    </script>
+  </body>
+</html>
