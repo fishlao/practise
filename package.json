@@ -1,0 +1,25 @@
+{
+  "name": "practise",
+  "version": "1.0.0",
+  "description": "this is for practise",
+  "main": "*",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fishlao/practise.git"
+  },
+  "author": "fishlao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fishlao/practise/issues"
+  },
+  "homepage": "https://github.com/fishlao/practise#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0" //这个是要在运行时加载的，所以要放在生产包里面哦！
+  },
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1"
+  }
+}
